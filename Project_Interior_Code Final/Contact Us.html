@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap.min.css"
+    <script src="/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  
+</head>
+<body>
+
+    <div>
+        <h1><img src="https://clipartstation.com/wp-content/uploads/2018/10/home-interior-clipart-5.jpg" alt="Logo" style="width:70px;" class="rounded-pill">Captivate Interior</h1>            
+    </div>
+  
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Shop</a>
+          </li>           
+      </ul>
+    </div>
+  </nav>   
+
+  
+    <a name= "Contact Us"></a>
+
+  <div class="mt-3 p-4 bg-primary text-white rounded">
+    <h2 Id = "Con_heading" onclick = "changefont()"><center>Contact Us</center></h2>  
+  </div>
+
+
+<section class="mb-4">
+
+    <p class="text-center w-responsive mx-auto mb-5">If you have any inquiries please do not hesitate to contact us! We will do our best to 
+        reach you during our wokring hours</p>
+
+    <div class="row">
+
+        <div class="col-md-9 mb-md-0 mb-5">
+            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+      
+                <div class="row">
+
+                    <!--Your Name-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="name" name="name" class="form-control">
+                            <label for="name" class="">Your name</label>
+                        </div>
+                    </div>
+
+                    <!--Your Email-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="email" name="email" class="form-control">
+                            <label for="email" class="">Your email</label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--Employee Email-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="Employee Email" name="subject" class="form-control">
+                            <label for="subject" class="">Employee Email</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <!--Your Inquiry-->
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                            <textarea type="text" id="Inquiry" name="Inquiry" rows="2" class="form-control md-textarea"></textarea>
+                            <label for="Inquiry">Your Inquiry</label>
+                        </div>
+
+                    </div>
+                </div>
+             
+
+            </form>
+
+            <div class="text-center text-md-left">
+                <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+            </div>
+            
+        </div>
+       
+        <!--Company Information-->
+        <div id = "con_info" class="col-md-3 text-center" onmouseover="mouseOver()" onmouseout="mouseOut()">
+            <ul class="list-unstyled mb-0">
+                <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                    <p>Auckland CBD, 1010, New Zealand</p>
+                </li>
+
+                <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                    <p>+ 63 123 4567</p>
+                </li>
+
+                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                    <p>contact@CaptivateInterior.co.nz</p>
+                </li>
+            </ul>
+        </div>
+        
+
+    </div>
+
+</section>
+
+<footer class="bg-dark text-center text-white">
+ 
+
+    <a href="https://www.facebook.com/"><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook_colored_svg_copy-512.png" alt="Facebook" width="30" height="30"></a>
+    <a href="https://twitter.com/"><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter_colored_svg-512.png" alt="twitter" width="30" height="30"></a>
+    <a href="https://www.instagram.com/"><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-512.png" alt="instagram" width="30" height="30"></a>
+    <a href="https://www.linkedin.com/"><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Linkedin_unofficial_colored_svg-512.png" alt="linkedin" width="30" height="30"></</a>
+
+<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+© 2020 Copyright:
+<a class="text-white">Project_Interior.com</a>
+</div>
+</footer>
+
+<script>
+function changefont()
+{
+
+   var Con_heading = document.getElementById('Con_heading');
+      
+   Con_heading.style.color = "Red";
+   Con_heading.style.fontSize = "70px";
+   
+}
+
+
+function mouseOver() {
+  document.getElementById("con_info").style.color = "blue";
+}
+
+function mouseOut() {
+  document.getElementById("con_info").style.color = "black";
+}
+
+</script>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
